@@ -11,9 +11,9 @@ services:
       - 443:443
     environment:
       DB_HOST: db
-      DB_USER: exampleuser
-      DB_PASSWORD: examplepass
-      DB_NAME: exampledb
+      DB_USER: admin
+      DB_PASSWORD: password
+      DB_NAME: le_petit_detailer
       WP_ENV: development
       WP_HOME: https://localhost
       WP_SITEURL: https://localhost/wp
@@ -25,9 +25,9 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
+      MYSQL_DATABASE: le_petit_detailer
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
